@@ -3,98 +3,100 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>React Counter</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: #f0f0f0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-      }
+  <title>React Counter</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
 
-      .counter-container {
-        background-color: #fff;
-        padding: 20px;
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        text-align: center;
-      }
+    .counter-container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
 
-      .count-display {
-        font-size: 2rem;
-        margin-bottom: 20px;
-      }
+    .count-display {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
 
-      .button-group {
-        display: flex;
-        gap: 10px;
-      }
+    .button-group {
+      display: flex;
+      gap: 10px;
+    }
 
-      .button {
-        padding: 10px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 1rem;
-      }
+    .button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
 
-      .increment {
-        background-color: #4caf50;
-        color: white;
-      }
+    .increment {
+      background-color: #4caf50;
+      color: white;
+    }
 
-      .decrement {
-        background-color: #f44336;
-        color: white;
-      }
+    .decrement {
+      background-color: #f44336;
+      color: white;
+    }
 
-      .reset {
-        background-color: #2196f3;
-        color: white;
-      }
+    .reset {
+      background-color: #2196f3;
+      color: white;
+    }
 
-      .button:hover {
-        opacity: 0.9;
-      }
+    .button:hover {
+      opacity: 0.9;
+    }
   </style>
 </head>
 <body>
   <div id="root"></div>
-  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
-  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
-  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-  <script type="text/babel">
+  <script type="module" crossorigin src="/assets/index-DfQ3Eo-l.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-DiwrgTda.css">
+  <script type="module">
+    import React from 'https://unpkg.com/react@17/umd/react.development.js';
+    import ReactDOM from 'https://unpkg.com/react-dom@17/umd/react-dom.development.js';
+
     function Counter() {
-      var [count, setCount] = React.useState(0);
-            
-        function increment() {
-          setCount(count + 1);
-        }
-            
-        function decrement() {
-          setCount(count - 1);
-        }
-            
-        function reset() {
-          setCount(0);
-        }
+      const [count, setCount] = React.useState(0);
 
-        return (
-          <div className="counter-container">
-            <h1 className="count-display">Count: {count}</h1>
-              <div className="button-group">
-                <button className="button increment" onClick={increment}>Increment</button>
-                <button className="button decrement" onClick={decrement}>Decrement</button>
-                <button className="button reset" onClick={reset}>Reset</button>
-              </div>
-            </div>
-          );
-        }
+      function increment() {
+        setCount(count + 1);
+      }
 
-        ReactDOM.render(<Counter />, document.getElementById('root'));
-    </script>
+      function decrement() {
+        setCount(count - 1);
+      }
+
+      function reset() {
+        setCount(0);
+      }
+
+      return (
+        <div className="counter-container">
+          <h1 className="count-display">Count: {count}</h1>
+          <div className="button-group">
+            <button className="button increment" onClick={increment}>Increment</button>
+            <button className="button decrement" onClick={decrement}>Decrement</button>
+            <button className="button reset" onClick={reset}>Reset</button>
+          </div>
+        </div>
+      );
+    }
+
+    ReactDOM.render(<Counter />, document.getElementById('root'));
+  </script>
 </body>
 </html>
